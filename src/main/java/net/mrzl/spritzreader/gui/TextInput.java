@@ -118,8 +118,6 @@ public class TextInput extends JDialog {
             }
         }
 
-        System.out.println( p.getDelimitedText() );
-
         int currentEndIndex = currentStartIndex + p.getDelimitedText().get( p.getCurrentTextIndex() ).length();
         try {
             doc.setCharacterAttributes( 0, currentStartIndex, normalStyle, true );

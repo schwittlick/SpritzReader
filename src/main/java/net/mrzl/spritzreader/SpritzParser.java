@@ -24,16 +24,18 @@ public class SpritzParser {
 
     private TextInput dialog;
 
-    public SpritzParser( int minTimeBetweenWords, int maxTimeInbetweenWords ) {
+    public SpritzParser( int minTimeBetweenWords, int maxTimeInbetweenWords, boolean withGUI ) {
         addText( "Placeholder String" );
 
         lastTimeWordUpdate = 0;
         running = false;
 
         wpm = maxTimeInbetweenWords;
-        dialog = new TextInput( this );
-        dialog.pack();
-        dialog.setVisible( true );
+        if ( withGUI ) {
+            dialog = new TextInput( this );
+            dialog.pack();
+            dialog.setVisible( true );
+        }
     }
 
     public void addText( String textToAdd ) {

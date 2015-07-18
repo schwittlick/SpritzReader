@@ -16,7 +16,7 @@ public class SpritzReaderApplet extends PApplet {
         size( 1400, 400 );
         textSize( 70 );
 
-        parser = new SpritzParser( 150, 250 );
+        parser = new SpritzParser( 150, 250, true );
     }
 
     public void draw() {

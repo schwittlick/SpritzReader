@@ -34,7 +34,6 @@ public class TextInput extends JDialog {
         wpmSpinner.setValue( wpmSlider.getValue() );
 
         clearButton.addActionListener( new ActionListener() {
-            @Override
             public void actionPerformed( ActionEvent e ) {
                 textPane.setText( "" );
                 p.addText( "" );
@@ -42,7 +41,6 @@ public class TextInput extends JDialog {
         } );
 
         startButton.addActionListener( new ActionListener() {
-            @Override
             public void actionPerformed( ActionEvent e ) {
                 if ( startButton.getText().equals( "Start" ) ) {
                     p.start();
@@ -55,7 +53,6 @@ public class TextInput extends JDialog {
         } );
 
         textPane.addCaretListener( new CaretListener() {
-            @Override
             public void caretUpdate( CaretEvent e ) {
                 JTextPane a = ( JTextPane ) e.getSource();
 
@@ -64,7 +61,6 @@ public class TextInput extends JDialog {
         } );
 
         pasteButton.addActionListener( new ActionListener() {
-            @Override
             public void actionPerformed( ActionEvent e ) {
                 String textFromClipboard = null;
                 try {
@@ -82,7 +78,6 @@ public class TextInput extends JDialog {
         } );
 
         wpmSpinner.addChangeListener( new ChangeListener() {
-            @Override
             public void stateChanged( ChangeEvent e ) {
                 JSpinner s = ( JSpinner ) e.getSource();
                 wpmSlider.setValue( ( Integer ) s.getValue() );
@@ -91,7 +86,6 @@ public class TextInput extends JDialog {
         } );
 
         wpmSlider.addChangeListener( new ChangeListener() {
-            @Override
             public void stateChanged( ChangeEvent e ) {
                 JSlider s = ( JSlider ) e.getSource();
                 wpmSpinner.setValue( s.getValue() );
